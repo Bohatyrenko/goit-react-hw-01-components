@@ -1,4 +1,5 @@
 import React from "react";
+// import defaultPhotoProfile from "../image/defaultPhotoProfile.jpg";
 
 const Profile = ({
   avatar,
@@ -34,6 +35,10 @@ const Profile = ({
       </ul>
     </div>
   );
+};
+
+Profile.defaultProps = {
+  avatar: "http://www.3dmir.ru/photoshop/minion-despicable-me/final.jpg",
 };
 
 export default Profile;
