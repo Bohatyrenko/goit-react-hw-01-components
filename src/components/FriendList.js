@@ -1,15 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import defaultPhotoProfile from "../image/defaultPhotoProfile.jpg";
+import FriendListItem from "./FriendListItem";
 
 const Friends = ({ bestPeople }) => (
   <ul class="friend-list">
     {bestPeople.map(({ id, isOnline, avatar, name }) => (
-      <li key={id} class="item">
-        <span class="status">{isOnline}</span>
-        <img class="avatar" src={avatar} alt={name} width="48" />
-        <p class="name">{name}</p>
-      </li>
+      <FriendListItem id={id} name={name} avatar={avatar} isOnline={isOnline} />
     ))}
   </ul>
 );
