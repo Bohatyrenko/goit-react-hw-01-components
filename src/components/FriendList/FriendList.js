@@ -1,10 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import defaultPhotoProfile from "../image/defaultPhotoProfile.jpg";
-import FriendListItem from "./FriendListItem";
+import React from 'react';
+import PropTypes from 'prop-types';
+import defaultPhotoProfile from './defaultPhotoProfile.jpg';
+import FriendListItem from './FriendListItem';
+import styles from './Friendlist.module.css';
 
 const Friends = ({ bestPeople }) => (
-  <ul class="friend-list">
+  <ul className={'styles.friend-list'}>
     {bestPeople.map(({ id, isOnline, avatar, name }) => (
       <FriendListItem id={id} name={name} avatar={avatar} isOnline={isOnline} />
     ))}

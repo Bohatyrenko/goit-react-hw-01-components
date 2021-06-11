@@ -1,8 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const TransactionHistory = ({ items }) => (
-  <table className="transaction-history">
+  <table
+    className="transaction-history"
+    style={{
+      border: '2px solid red',
+    }}
+  >
     <thead>
       <tr>
         <th>Type</th>
@@ -25,7 +30,7 @@ const TransactionHistory = ({ items }) => (
 );
 
 TransactionHistory.defaultProps = {
-  amount: "free",
+  amount: 'free',
 };
 
 TransactionHistory.prototype = {
