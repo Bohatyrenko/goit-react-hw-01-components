@@ -19,7 +19,7 @@ import transactionData from './transaction.json';
 
 const App = () => (
   <div>
-    <Profile data={userDate123} />
+    <Profile data={userDate12345} />
     <Statistics title="Upload stats" stats={statisticalData} />
     <Friends bestPeople={friendsData} />
     <TransactionHistory items={transactionData} />
