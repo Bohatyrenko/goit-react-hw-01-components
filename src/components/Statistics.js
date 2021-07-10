@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Statistics = ({ title, stats }) => (
   <section className="statistics">
-    <h2 className="title">{title}</h2>
+    {title && <h2 className="title">{title}</h2>}
 
     <ul className="stat-list">
       {stats.map(({ id, label, percentage }) => (
@@ -20,7 +20,7 @@ Statistics.defaultProps = {
   title: <h2 className="title">Upload stats</h2>,
 };
 
-Statistics.prototype = {
+Statistics.propType = {
   title: PropTypes.string,
   stats: PropTypes.string.isRequired,
 };
